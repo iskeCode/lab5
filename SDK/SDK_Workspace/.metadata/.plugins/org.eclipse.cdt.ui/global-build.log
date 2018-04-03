@@ -9273,3 +9273,88 @@ Finished building: hello_world.elf.elfcheck
 10:36:00 **** Incremental Build of configuration Debug for project hello_world ****
 make all 
 make: Nothing to be done for `all'.
+10:10:45 **** Auto Build of project hello_world_bsp ****
+make -k all 
+libgen -hw ../basic_system_hw_platform/system.xml\
+	       -lp D:/work/lprs2/2013_2014/Resene_vezbe/lab45/basic_system\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../basic_system_hw_platform/system.xml -lp
+D:/work/lprs2/2013_2014/Resene_vezbe/lab45/basic_system -pe microblaze_0 -log
+libgen.log system.mss 
+
+ERROR:EDK:3323 -
+   D:\ra41-2015\lprs\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss line 51 -
+   Cannot find MDD file vga_periph_mem_v2_1_0.mdd for the driver vga_periph_mem
+   1.00.a
+INFO:EDK:1040 - Directories Searched :
+  -
+D:\ra41-2015\lprs\lab5\SDK\SDK_Workspace\hello_world_bsp\drivers/vga_periph_mem_
+v1_00_a/data
+  -
+D:\ra41-2015\lprs\lab5\SDK\SDK_Workspace\hello_world_bsp\pcores/vga_periph_mem_v
+1_00_a/data
+  -
+D:\work\lprs2\2013_2014\Resene_vezbe\lab45\basic_system\drivers/vga_periph_mem_v
+1_00_a/data
+  -
+D:\work\lprs2\2013_2014\Resene_vezbe\lab45\basic_system\pcores/vga_periph_mem_v1
+_00_a/data
+  - C:\Xilinx\14.6\ISE_DS\EDK\sw\lib\drivers/vga_periph_mem_v1_00_a/data
+  - C:\Xilinx\14.6\ISE_DS\EDK\sw\lib\pcores/vga_periph_mem_v1_00_a/data
+  -
+C:\Xilinx\14.6\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers/vga_periph_mem_v1_00_a
+/data
+  -
+C:\Xilinx\14.6\ISE_DS\EDK\sw\XilinxProcessorIPLib\pcores/vga_periph_mem_v1_00_a/
+data
+  - C:\Xilinx\14.6\ISE_DS\EDK\sw\ThirdParty\drivers/vga_periph_mem_v1_00_a/data
+  - C:\Xilinx\14.6\ISE_DS\EDK\sw\ThirdParty\pcores/vga_periph_mem_v1_00_a/data
+INFO:EDK:772 - Check the following for possible causes of not finding MDD:
+  - If DRIVER_VER is specified in MSS, it must follow literal form X.YY.Z
+  - There is no driver with given name
+  - Driver exists but not that version
+  - Driver and version (directory) exist but no MDD is available
+
+ERROR:EDK:1204 - Errors occured while creating Software System.
+make: *** [microblaze_0/lib/libxil.a] Greška 2
+make: Meta `all' nije ponovo izraðen zbog grešaka.
+10:10:50 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+make: Ništa za napraviti za `all'.
+10:16:55 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2778	    268	   2098	   5144	   1418	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../basic_system_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../basic_system_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '

@@ -281,6 +281,10 @@ architecture IMP of user_logic is
   signal dir_pixel_row       : std_logic_vector(10 downto 0);
   
   --
+  
+  signal unit_id			 : std_logic_vector(1 downto 0);
+  signal global_we			 : std_logic;
+  
   signal font_size           : std_logic_vector(3 downto 0);
   signal show_frame          : std_logic;
   signal foreground_color    : std_logic_vector(23 downto 0);
@@ -296,13 +300,19 @@ architecture IMP of user_logic is
 begin
 
   --USER logic implementation added here
-  pixel_address <= (others => '0');
+  unit_id		<= Bus2IP_Addr(25 downto 24);
+  unit_addr		<= Bus2IP_Addr(23 downto 2);
+  global_we		<= Bus2IP_CS and (not Bus2IP_RNW);
+  
+  pixel_address <= unit_addr;
   pixel_value   <= (others => '0');
-  pixel_we      <= '0';
+  pixel_we      <= '1' when global_we = '1' and unit_id = "01" else
+					'0';
 
-  char_address <= (others => '0');
+  char_address <= unit_addr;
   char_value   <= (others => '0');
-  char_we      <= '0';
+  char_we      <= '1' when (global_we = '1' and unit_id = "00") else
+					'0';
   
   font_size        <= x"1";
   show_frame       <= '1';
