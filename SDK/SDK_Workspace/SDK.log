@@ -137,3 +137,30 @@
 09:39:04.953 INFO  - Refreshed build settings on project hello_world 
 10:33:44.745 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 10:36:10.473 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:08:58.228 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:08:58.274 ERROR - Unable to read in MSS file D:\ra41-2015\lprs\lab5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:07.137 ERROR - Unable to read in MSS file D:\ra41-2015\lprs\lab5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:07.153 ERROR - Unable to read in MSS file D:\ra41-2015\lprs\lab5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:07.199 WARN  - Unable to determine location of documentation for OS . 
+09:09:07.199 ERROR - Unable to read in MSS file D:\ra41-2015\lprs\lab5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:09:07.215 ERROR - Unable to read in MSS file D:\ra41-2015\lprs\lab5\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:19:51.013 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:31:47.888 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:34:13.355 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:39:07.325 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:40:53.598 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:42:50.515 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:07:21.399 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:09:24.746 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:22:55.990 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 

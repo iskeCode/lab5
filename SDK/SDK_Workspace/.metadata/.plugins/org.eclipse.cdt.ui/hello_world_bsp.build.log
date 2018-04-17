@@ -1,54 +1,6 @@
-10:10:45 **** Auto Build of project hello_world_bsp ****
+10:09:25 **** Auto Build of project hello_world_bsp ****
 make -k all 
-libgen -hw ../basic_system_hw_platform/system.xml\
-	       -lp D:/work/lprs2/2013_2014/Resene_vezbe/lab45/basic_system\
-	       -pe microblaze_0 \
-	       -log libgen.log \
-	       system.mss
-libgen
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+'Finished building libraries'
 
-Command Line: libgen -hw ../basic_system_hw_platform/system.xml -lp
-D:/work/lprs2/2013_2014/Resene_vezbe/lab45/basic_system -pe microblaze_0 -log
-libgen.log system.mss 
-
-ERROR:EDK:3323 -
-   D:\ra41-2015\lprs\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss line 51 -
-   Cannot find MDD file vga_periph_mem_v2_1_0.mdd for the driver vga_periph_mem
-   1.00.a
-INFO:EDK:1040 - Directories Searched :
-  -
-D:\ra41-2015\lprs\lab5\SDK\SDK_Workspace\hello_world_bsp\drivers/vga_periph_mem_
-v1_00_a/data
-  -
-D:\ra41-2015\lprs\lab5\SDK\SDK_Workspace\hello_world_bsp\pcores/vga_periph_mem_v
-1_00_a/data
-  -
-D:\work\lprs2\2013_2014\Resene_vezbe\lab45\basic_system\drivers/vga_periph_mem_v
-1_00_a/data
-  -
-D:\work\lprs2\2013_2014\Resene_vezbe\lab45\basic_system\pcores/vga_periph_mem_v1
-_00_a/data
-  - C:\Xilinx\14.6\ISE_DS\EDK\sw\lib\drivers/vga_periph_mem_v1_00_a/data
-  - C:\Xilinx\14.6\ISE_DS\EDK\sw\lib\pcores/vga_periph_mem_v1_00_a/data
-  -
-C:\Xilinx\14.6\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers/vga_periph_mem_v1_00_a
-/data
-  -
-C:\Xilinx\14.6\ISE_DS\EDK\sw\XilinxProcessorIPLib\pcores/vga_periph_mem_v1_00_a/
-data
-  - C:\Xilinx\14.6\ISE_DS\EDK\sw\ThirdParty\drivers/vga_periph_mem_v1_00_a/data
-  - C:\Xilinx\14.6\ISE_DS\EDK\sw\ThirdParty\pcores/vga_periph_mem_v1_00_a/data
-INFO:EDK:772 - Check the following for possible causes of not finding MDD:
-  - If DRIVER_VER is specified in MSS, it must follow literal form X.YY.Z
-  - There is no driver with given name
-  - Driver exists but not that version
-  - Driver and version (directory) exist but no MDD is available
-
-ERROR:EDK:1204 - Errors occured while creating Software System.
-make: *** [microblaze_0/lib/libxil.a] Greška 2
-make: Meta `all' nije ponovo izraðen zbog grešaka.
-
-10:10:47 Build Finished (took 1s.470ms)
+10:09:25 Build Finished (took 173ms)
 
