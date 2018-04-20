@@ -1,16 +1,10 @@
-09:40:23 **** Auto Build of configuration Debug for project hello_world ****
+10:29:51 **** Auto Build of configuration Debug for project hello_world ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:70:23: warning: variable 'step_y' set but not used [-Wunused-but-set-variable]
-../src/helloworld.c:70:20: warning: variable 'b' set but not used [-Wunused-but-set-variable]
-../src/helloworld.c:70:18: warning: variable 'a' set but not used [-Wunused-but-set-variable]
-../src/helloworld.c:69:25: warning: unused variable 't' [-Wunused-variable]
-../src/helloworld.c:69:16: warning: unused variable 'y' [-Wunused-variable]
-../src/helloworld.c:69:9: warning: unused variable 'x' [-Wunused-variable]
-../src/helloworld.c:50:19: warning: unused variable 'c' [-Wunused-variable]
+../src/helloworld.c:52:19: warning: unused variable 'c' [-Wunused-variable]
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: hello_world.elf'
@@ -21,7 +15,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -ml
 'Invoking: MicroBlaze Print Size'
 mb-size hello_world.elf  |tee "hello_world.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   3070	    268	   2088	   5426	   1532	hello_world.elf
+   3574	    276	   2080	   5930	   172a	hello_world.elf
 'Finished building: hello_world.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -38,5 +32,5 @@ elfcheck passed.
 'Finished building: hello_world.elf.elfcheck'
 ' '
 
-09:40:24 Build Finished (took 1s.331ms)
+10:29:52 Build Finished (took 1s.342ms)
 

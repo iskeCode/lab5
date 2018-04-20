@@ -237,3 +237,25 @@
 09:16:43.339 WARN  - Terminating existing sessions on processor microblaze_0 
 09:18:10.974 WARN  - Terminating existing sessions on processor microblaze_0 
 09:18:14.907 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:18:41.269 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:19:01.527 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:19:10.156 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:19:18.693 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:19:34.113 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:19:43.866 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:20:29.109 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:21:18.280 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:22:55.978 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:30:10.986 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:30:41.096 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:31:01.957 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:31:10.709 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:31:39.432 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:32:23.570 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:32:44.912 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:34:21.562 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:34:55.526 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:35:25.887 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:35:46.420 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:40:54.638 INFO  - FPGA configured successfully with bitstream "D:/ra41-2015/lprs/lab5/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 

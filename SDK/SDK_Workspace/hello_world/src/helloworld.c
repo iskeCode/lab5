@@ -42,6 +42,8 @@
 #include "vga_periph_mem.h"
 
 void print(char *str);
+typedef enum direction {UP,DOWN, LEFT, RIGHT} direction;
+direction dir = DOWN, prev_dir = DOWN;
 
 int main()
 {
@@ -66,27 +68,73 @@ int main()
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     //draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    int x = 0, y = 240, t = 1000;
-    unsigned int a,b, step_y;
+    int x = 320, y = 480, t;
+    unsigned int a,b, step_y, step_x;
     a =40;
     b = 320;
     step_y = 10;
-    /*while(1) {
+    step_x = 0;
+    while(1) {
     	draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, x, y, a, b);
 
-    	if (y+a+step_y > 480) {
+    	switch(dir) {
+    	case UP:
     		step_y = -10;
+    		if (y < 240) {
+				step_x = 10;
+				step_y = 0;
+				dir = RIGHT;
+			} else if(y == 0) {
+				step_x = 10;
+				step_y = 0;
+				dir = RIGHT;
+			}
+    		break;
+    	case DOWN:
+    		step_y = -10;
+			if (y < 240) {
+				step_x = 10;
+				step_y = 0;
+				dir = RIGHT;
+			}
+    		break;
+    	case LEFT:
+    		step_x = -10;
+			if (x == 0) {
+				step_x = 0;
+				step_y = -10;
+				dir = UP;
+			}
+    		break;
+    	case RIGHT:
+    		step_x = 10;
+			if (x+b+step_x > 640 && prev_dir == UP) {
+				step_x = - 10;
+				step_y = 0;
+				dir = LEFT;
+			}
+    		break;
     	}
+
+    	/*if (y+a+step_y > 240) {
+    		step_x = 10;
+    		step_y = 0;
+    	}
+    	if (x+b+step_x > 640) {
+			step_x = -10;
+			step_y = 0;
+		}
     	if (y == 0) {
 			step_y = 10;
-		}
+		}*/
     	y+=step_y;
+    	x+=step_x;
     	//x+=y%2;
     	//x = x > 640 ? 0 : y;
-    	t = 500000;
+    	t = 100000;
     	while(t)
     		t--;
-    }*/
+    }
 
     set_cursor(350);
     print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 5);
