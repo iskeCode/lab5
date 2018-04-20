@@ -41,7 +41,6 @@
 #include "xio.h"
 #include "vga_periph_mem.h"
 
-
 void print(char *str);
 
 int main()
@@ -67,10 +66,31 @@ int main()
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     //draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 20, 320);
+    int x = 0, y = 240, t = 1000;
+    unsigned int a,b, step_y;
+    a =40;
+    b = 320;
+    step_y = 10;
+    /*while(1) {
+    	draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, x, y, a, b);
+
+    	if (y+a+step_y > 480) {
+    		step_y = -10;
+    	}
+    	if (y == 0) {
+			step_y = 10;
+		}
+    	y+=step_y;
+    	//x+=y%2;
+    	//x = x > 640 ? 0 : y;
+    	t = 500000;
+    	while(t)
+    		t--;
+    }*/
+
     set_cursor(350);
-    //print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 5);
-    print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, c);
+    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 5);
+    //print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, c);
 
     return 0;
 }
