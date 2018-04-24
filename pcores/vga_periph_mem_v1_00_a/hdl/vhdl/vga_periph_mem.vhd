@@ -171,6 +171,7 @@ entity vga_periph_mem is
     red_o          : out std_logic_vector(7 downto 0);
     green_o        : out std_logic_vector(7 downto 0);
     blue_o         : out std_logic_vector(7 downto 0);
+    IRQ_o          : out std_logic;
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -288,7 +289,8 @@ architecture IMP of vga_periph_mem is
   signal user_IP2Bus_RdAck              : std_logic;
   signal user_IP2Bus_WrAck              : std_logic;
   signal user_IP2Bus_Error              : std_logic;
-
+  signal IRQ_s                          : std_logic;
+ 
 begin
 
   ------------------------------------------
@@ -403,6 +405,7 @@ begin
       red_o          => red_o,
       green_o        => green_o,
       blue_o         => blue_o,
+      IRQ_o          => IRQ_s,
       -- MAP USER PORTS ABOVE THIS LINE ------------------
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,
@@ -425,7 +428,8 @@ begin
       IP2Bus_WrAck                   => user_IP2Bus_WrAck,
       IP2Bus_Error                   => user_IP2Bus_Error
     );
-
+   
+  IRQ_o <= IRQ_s;
   ------------------------------------------
   -- connect internal signals
   ------------------------------------------

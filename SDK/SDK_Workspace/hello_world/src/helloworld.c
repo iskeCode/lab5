@@ -68,16 +68,16 @@ int main()
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     //draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    int x = 320, y = 480, t;
+    int x = 0, y = 240, t;
     unsigned int a,b, step_y, step_x;
     a =40;
     b = 320;
-    step_y = 10;
+    step_y = 5;
     step_x = 0;
     while(1) {
     	draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, x, y, a, b);
 
-    	switch(dir) {
+    	/*switch(dir) {
     	case UP:
     		step_y = -10;
     		if (y < 240) {
@@ -114,24 +114,18 @@ int main()
 				dir = LEFT;
 			}
     		break;
-    	}
+    	}*/
 
-    	/*if (y+a+step_y > 240) {
-    		step_x = 10;
-    		step_y = 0;
+    	if (y+a+step_y > 480) {
+    		step_y = -5;
     	}
-    	if (x+b+step_x > 640) {
-			step_x = -10;
-			step_y = 0;
-		}
     	if (y == 0) {
-			step_y = 10;
-		}*/
+			step_y = 5;
+		}
     	y+=step_y;
-    	x+=step_x;
     	//x+=y%2;
     	//x = x > 640 ? 0 : y;
-    	t = 100000;
+    	t = 1000000;
     	while(t)
     		t--;
     }
